@@ -5,27 +5,35 @@
 
 @layer components {
   .center {
-    @apply flex justify-center items-center w-screen h-screen;
+    @apply flex justify-center items-start sm:items-center w-screen h-screen overflow-hidden;
   }
 
   .profile-container {
-    @apply uppercase sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-sm w-5/6 h-1/4;
+    @apply uppercase sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-none sm:backdrop-blur-sm sm:w-5/6 sm:h-1/4 sm:min-w-[930px] w-full m-4 flex sm:flex-row flex-col items-start sm:items-center max-h-[1300px];
+  }
+
+  .name {
+    @apply sm:text-[5rem] text-3xl font-bold uppercase hover:tracking-wide transition-all duration-100;
+  }
+
+  .logo {
+    @apply sm:m-4 sm:rounded-full sm:hover:rotate-[360deg] sm:hover:scale-110 sm:transition-all sm:duration-500 sm:inline h-3/4;
   }
 
   .aboutme-container {
-    @apply mt-4 w-[580px]
+    @apply w-[580px] m-4 sm:max-h-[192px] sm:text-left text-center h-3/4 flex flex-col space-y-8
   }
 
   .icon-container {
-    @apply flex flex-row items-start mt-4 ml-4 space-x-12
+    @apply flex flex-row sm:items-start sm:justify-start justify-center space-x-12 ml-3
   }
 
   .icon {
-    @apply scale-[2.2] hover:scale-[2.3] transition-all duration-100;
+    @apply scale-[2.0] hover:scale-[2.2] transition-all duration-100;
   }
 
   #svg {
-    @apply absolute z-0 w-[110%] h-[110%];
+    @apply pt-24 relative sm:pt-0 sm:absolute z-0 w-[110%] h-[110%];
   }
 
 }

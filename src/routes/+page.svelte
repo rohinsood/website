@@ -9,13 +9,13 @@
 <div class="center">
   
   <div class="profile-container flex flex-row justify-center">
-    <img src="logo.svg" alt="uh oh!" class="m-4 rounded-full hover:rotate-[360deg] hover:scale-110 transition-all duration-300">
+    <img src="logo.svg" alt="uh oh!" class="logo">
     
     <div class="aboutme-container">
-      <h1 class="text-[5rem] font-bold uppercase hover:tracking-wide transition-all duration-100">
+      <h1 class="name">
         rohin sood
       </h1>
-      <p class="lowercase">
+      <p class="lowercase ml-1">
         hi, I'm a high schooler motivated by the vast applications of STEM in robotics and technology to help myself and those around me learn.
       </p>
       <div class="icon-container">
