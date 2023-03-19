@@ -15,7 +15,7 @@
       <h1 class="name">
         rohin sood
       </h1>
-      <p class="ml-1">
+      <p class="ml-1 sm:pt-4 pt-0">
         Hi, I'm a high schooler motivated by the vast applications of STEM in robotics and technology to help myself and those around me learn.
       </p>
       <div class="icon-container">

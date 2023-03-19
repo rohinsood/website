@@ -9,7 +9,11 @@
   }
 
   .profile-container {
-    @apply sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-none sm:backdrop-blur-sm sm:w-5/6 sm:h-1/4 sm:min-w-[930px] w-full m-4 flex sm:flex-row flex-col items-start sm:items-center max-h-[1300px];
+    @apply sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-none sm:backdrop-blur-sm sm:w-5/6 sm:h-1/4 sm:min-w-[930px] w-full m-4 flex sm:flex-row flex-col items-start sm:items-center max-h-[1300px] justify-center;
+  }
+
+  .aboutme-container {
+    @apply w-[580px] m-4 sm:max-h-[192px] text-left h-3/4 flex flex-col space-y-4 justify-center
   }
 
   .name {
@@ -18,10 +22,6 @@
 
   .logo {
     @apply sm:m-4 sm:rounded-full sm:hover:rotate-[360deg] sm:hover:scale-110 sm:transition-all sm:duration-500 sm:h-3/4 sm:inline hidden;
-  }
-
-  .aboutme-container {
-    @apply w-[580px] m-4 sm:max-h-[192px] text-left  h-3/4 flex flex-col sm:space-y-8 space-y-4
   }
 
   .icon-container {
