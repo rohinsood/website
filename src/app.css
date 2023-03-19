@@ -9,11 +9,11 @@
   }
 
   .profile-container {
-    @apply uppercase sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-none sm:backdrop-blur-sm sm:w-5/6 sm:h-1/4 sm:min-w-[930px] w-full m-4 flex sm:flex-row flex-col items-start sm:items-center max-h-[1300px];
+    @apply sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-none sm:backdrop-blur-sm sm:w-5/6 sm:h-1/4 sm:min-w-[930px] w-full m-4 flex sm:flex-row flex-col items-start sm:items-center max-h-[1300px];
   }
 
   .name {
-    @apply sm:text-[5rem] text-3xl font-bold uppercase hover:tracking-wide transition-all duration-100;
+    @apply sm:text-[5rem] text-3xl font-bold hover:tracking-wide transition-all duration-100 uppercase;
   }
 
   .logo {
