@@ -5,7 +5,7 @@
 
 @layer components {
   .center {
-    @apply flex justify-center items-start sm:items-center w-screen h-screen overflow-hidden;
+    @apply flex justify-center items-start sm:items-center w-full sm:w-screen h-screen overflow-hidden;
   }
 
   .profile-container {
@@ -21,11 +21,11 @@
   }
 
   .aboutme-container {
-    @apply w-[580px] m-4 sm:max-h-[192px] sm:text-left text-center h-3/4 flex flex-col sm:space-y-8 space-y-4
+    @apply w-[580px] m-4 sm:max-h-[192px] text-left  h-3/4 flex flex-col sm:space-y-8 space-y-4
   }
 
   .icon-container {
-    @apply flex flex-row sm:items-start sm:justify-start justify-center space-x-12 ml-3
+    @apply flex flex-row sm:items-start justify-start space-x-12 ml-3
   }
 
   .icon {
