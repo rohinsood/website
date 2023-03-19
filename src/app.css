@@ -17,11 +17,11 @@
   }
 
   .logo {
-    @apply sm:m-4 sm:rounded-full sm:hover:rotate-[360deg] sm:hover:scale-110 sm:transition-all sm:duration-500 sm:inline h-3/4;
+    @apply sm:m-4 sm:rounded-full sm:hover:rotate-[360deg] sm:hover:scale-110 sm:transition-all sm:duration-500 sm:h-3/4 sm:inline hidden;
   }
 
   .aboutme-container {
-    @apply w-[580px] m-4 sm:max-h-[192px] sm:text-left text-center h-3/4 flex flex-col space-y-8
+    @apply w-[580px] m-4 sm:max-h-[192px] sm:text-left text-center h-3/4 flex flex-col sm:space-y-8 space-y-4
   }
 
   .icon-container {
