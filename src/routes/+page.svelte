@@ -22,7 +22,7 @@
         rohin sood
       </h1>
       <p class="ml-1 sm:pt-4 pt-0">
-        Hi! My personal website is in the works, but you can take a look at my links below in the meantime.
+        Explaining the world around me using science, technology, and computers.
       </p>
       <div class="icon-container">
         <a href="mailto:rs.rohinsood@gmail.com">
