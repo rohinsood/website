@@ -1,39 +1,237 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer components {
-  .center {
-    @apply flex justify-center items-start sm:items-center w-full sm:w-screen h-screen overflow-hidden;
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  background: #f8fafc;
+}
+
+.home {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mountains {
+  position: absolute;
+  z-index: 0;
+  inset: -5%;
+  width: 110%;
+  height: 110%;
+  pointer-events: none;
+}
+
+.mountains .path {
+  stroke: #27272a;
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-mountains 30s linear forwards;
+}
+
+@keyframes draw-mountains {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.profile {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  width: min(86vw, 1080px);
+  min-height: 12rem;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  border-radius: 1.5rem;
+  background: rgba(248, 250, 252, .42);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.logo {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(9rem, 17vw, 13.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  transition: transform .5s ease;
+}
+
+.logo:hover {
+  transform: rotate(360deg) scale(1.08);
+}
+
+.about {
+  width: min(100%, 37rem);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: .95;
+  letter-spacing: -.04em;
+  text-transform: uppercase;
+  transition: letter-spacing .15s ease;
+}
+
+h1:hover {
+  letter-spacing: .01em;
+}
+
+.about p {
+  max-width: 44ch;
+  margin: 1.2rem 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.55;
+}
+
+.social-links {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: inherit;
+  font-size: .7rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.social-links a:hover {
+  color: #f8fafc;
+  background: #0f172a;
+  transform: scale(1.08);
+}
+
+a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+}
+
+.posts-link { display: inline-flex; gap: 1.5rem; margin-top: 1.4rem; color: inherit; font-size: .9rem; font-weight: 700; text-underline-offset: .3em; }
+.posts-shell { position: relative; min-height: 100svh; padding: 2.5rem 0; isolation: isolate; }
+.posts-background { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.reading-panel { width: min(86vw, 1080px); min-height: calc(100svh - 5rem); margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4.5rem); border: 1px solid rgba(255,255,255,.7); border-radius: 1.5rem; background: rgba(255,255,255,.83); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.posts-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.8rem 0; border-bottom: 1px solid #0f172a20; }
+.posts-header a { color: inherit; text-decoration: none; }
+.wordmark { font-size: .85rem; font-weight: 700; letter-spacing: -.025em; text-transform: uppercase; }
+.posts-header nav { display: flex; gap: 1.5rem; font-size: .8rem; }
+.posts-header nav a[aria-current], .posts-header a:hover { text-decoration: underline; text-underline-offset: .4em; }
+.posts-intro { padding: clamp(3rem, 7vw, 6rem) 0 3.5rem; }
+.posts-intro > p { max-width: 35ch; margin: 1.5rem 0 0; font-size: 1.15rem; line-height: 1.65; color: #475569; }
+.reading-panel h1 { font-size: clamp(2.7rem, 6vw, 4.75rem); line-height: 1.02; overflow-wrap: anywhere; }
+.reading-panel h1:hover { letter-spacing: -.04em; }
+.post-list { padding-bottom: 5rem; }
+.post-row { display: block; padding: 2rem 0; border-top: 1px solid #0f172a30; border-bottom: 1px solid #0f172a30; color: inherit; text-decoration: none; }
+.post-meta { color: #64748b; font-size: .75rem; line-height: 1.6; }
+.post-row h2 { display: flex; justify-content: space-between; gap: 1rem; margin: .85rem 0; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; letter-spacing: -.035em; }
+.post-row > p { max-width: 53ch; color: #475569; font-size: 1rem; line-height: 1.7; }
+.read-post { display: inline-block; margin-top: 1rem; font-size: .8rem; font-weight: 700; }
+.post-row:hover h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.posts-footer { padding: 1.5rem 0; border-top: 1px solid #0f172a20; color: #64748b; font-size: .75rem; }
+.post-article { max-width: 680px; margin: 0 auto; padding: 2.5rem 0 4rem; }
+.back-to-posts { color: #475569; font-size: .8rem; text-decoration: none; }
+.back-to-posts:hover { text-decoration: underline; text-underline-offset: .3em; }
+.article-heading { padding: 3rem 0 2.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid #0f172a20; }
+.article-deck { max-width: 40ch; margin: 1.5rem 0; font-size: 1.2rem; line-height: 1.6; color: #475569; }
+.prose { font-size: 1.05rem; line-height: 1.85; overflow-wrap: anywhere; }
+.prose p { margin: 1.3em 0; }
+.prose h2 { margin: 2.2em 0 .75em; font-size: 1.7rem; font-weight: 700; line-height: 1.25; letter-spacing: -.035em; scroll-margin-top: 2rem; }
+.prose h3 { margin: 1.8em 0 .65em; font-size: 1.2rem; font-weight: 700; line-height: 1.4; }
+.prose a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+.prose strong { font-weight: 700; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin: 1.3em 0; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li { padding-left: .3rem; margin: .45em 0; }
+.prose blockquote { margin: 2rem 0; padding: .1rem 0 .1rem 1.4rem; border-left: 2px solid #64748b; color: #475569; font-style: italic; }
+.prose code { padding: .15em .35em; border-radius: .25rem; background: #0f172a08; font-family: Consolas, monospace; font-size: .85em; }
+.prose pre { max-width: 100%; overflow-x: auto; padding: 1.4rem; margin: 1.8rem 0; border: 1px solid #0f172a15; border-radius: .6rem; background: #f1f5f9; line-height: 1.7; }
+.prose pre code { padding: 0; background: none; overflow-wrap: normal; }
+.prose pre:focus-visible { outline: 2px solid #2563eb; outline-offset: 4px; }
+.prose figure { margin: 2.5rem 0; }
+.post-illustration { display: grid; place-items: center; padding: 2.5rem; background: #f1f5f9; border-radius: .6rem; }
+.post-illustration img { display: block; width: min(100%, 240px); height: auto; mix-blend-mode: multiply; }
+.prose figcaption { margin-top: .8rem; font-size: .75rem; line-height: 1.6; color: #64748b; }
+.prose hr { border: 0; border-top: 1px solid #0f172a25; margin: 2.5rem 0; }
+.article-end { display: inline-block; margin-top: 2rem; }
+
+@media (max-width: 680px) {
+  .posts-shell { padding: 1rem 0; }
+  .reading-panel { width: calc(100% - 2rem); min-height: calc(100svh - 2rem); padding: 0 1.25rem; border-radius: 1rem; }
+  .posts-header { gap: .75rem; padding: 1.4rem 0; }
+  .posts-header nav { gap: 1rem; }
+  .wordmark { font-size: .75rem; }
+  .article-heading { padding-top: 2.5rem; }
+  .prose { font-size: 1rem; }
+}
+
+@media (max-width: 680px) {
+  .mountains {
+    inset: -8% -72%;
+    width: 244%;
+    height: 116%;
   }
 
-  .profile-container {
-    @apply sm:mx-auto relative rounded-3xl bg-transparent backdrop-blur-none sm:backdrop-blur-sm sm:w-5/6 sm:h-1/4 sm:min-w-[930px] w-full m-4 flex sm:flex-row flex-col items-start sm:items-center max-h-[1300px] justify-center;
-  }
-
-  .aboutme-container {
-    @apply w-[580px] m-4 sm:max-h-[192px] text-left h-3/4 flex flex-col space-y-4 justify-center
-  }
-
-  .name {
-    @apply sm:text-[5rem] text-3xl font-bold hover:tracking-wide transition-all duration-100 uppercase;
+  .profile {
+    align-items: flex-start;
+    width: calc(100% - 2rem);
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .logo {
-    @apply sm:m-4 sm:rounded-full sm:hover:rotate-[360deg] sm:hover:scale-110 sm:transition-all sm:duration-500 sm:h-3/4 sm:inline hidden;
+    width: 7.5rem;
   }
 
-  .icon-container {
-    @apply flex flex-row sm:items-start justify-start space-x-12 ml-3
+  h1 {
+    font-size: clamp(2.8rem, 15vw, 4rem);
   }
 
-  .icon {
-    @apply scale-[2.0] hover:scale-[2.2] transition-all duration-100;
+  .social-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mountains .path {
+    animation: none;
+    stroke-dashoffset: 0;
   }
 
-  #svg {
-    @apply pt-24 relative sm:pt-0 sm:absolute z-0 w-[110%] h-[110%];
+  .logo,
+  h1,
+  .social-links a {
+    transition: none;
   }
-
 }
