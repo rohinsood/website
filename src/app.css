@@ -137,7 +137,7 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-.posts-link { display: inline-flex; gap: 1.5rem; margin-top: 1.4rem; color: inherit; font-size: .9rem; font-weight: 700; text-underline-offset: .3em; }
+.social-links .posts-link { border-radius: .65rem; width: auto; padding: 0 1.1rem; }
 .posts-shell { position: relative; min-height: 100svh; padding: 2.5rem 0; isolation: isolate; }
 .posts-background { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
 .reading-panel { width: min(86vw, 1080px); min-height: calc(100svh - 5rem); margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4.5rem); border: 1px solid rgba(255,255,255,.7); border-radius: 1.5rem; background: rgba(255,255,255,.83); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
@@ -179,6 +179,7 @@ a:focus-visible {
 .prose pre code { padding: 0; background: none; overflow-wrap: normal; }
 .prose pre:focus-visible { outline: 2px solid #2563eb; outline-offset: 4px; }
 .prose figure { margin: 2.5rem 0; }
+.prose figure > img { object-fit: contain; border-radius: .6rem; width: 100%; height: auto; max-height: 640px; display: block; }
 .post-illustration { display: grid; place-items: center; padding: 2.5rem; background: #f1f5f9; border-radius: .6rem; }
 .post-illustration img { display: block; width: min(100%, 240px); height: auto; mix-blend-mode: multiply; }
 .prose figcaption { margin-top: .8rem; font-size: .75rem; line-height: 1.6; color: #64748b; }
