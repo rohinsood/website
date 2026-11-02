@@ -38,11 +38,10 @@ body {
 }
 
 .mountains .path {
-  stroke: #27272a;
-  stroke-width: 1.15;
+  stroke: #202022;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: draw-mountains var(--draw-duration, 10s) ease-in-out var(--draw-delay, 0s) forwards;
