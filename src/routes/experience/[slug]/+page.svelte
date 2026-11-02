@@ -1,8 +1,8 @@
-<script lang="ts">import FlowDiagram from '$lib/FlowDiagram.svelte'; import type { PageData } from './$types'; export let data: PageData; $: experience = data.experience;</script>
+<script lang="ts">import FlowDiagram from '$lib/FlowDiagram.svelte'; import CompanyLogo from '$lib/CompanyLogo.svelte'; import type { PageData } from './$types'; export let data: PageData; $: experience = data.experience;</script>
 <svelte:head><title>{experience.company} — Rohin Sood</title><meta name="description" content={experience.deck} /></svelte:head>
 <article class="experience-article">
   <a class="back-to-posts" href="/experience">← All experience</a>
-  <header class="article-heading entrance"><p class="section-kicker">{experience.company} / {experience.date}</p><h1>{experience.title}</h1><p class="article-deck">{experience.deck}</p><p class="post-meta">{experience.role}</p></header>
+  <header class="article-heading entrance"><div class="experience-brand"><CompanyLogo slug={experience.slug} /><p class="section-kicker">{experience.company} / {experience.date}</p></div><h1>{experience.title}</h1><p class="article-deck">{experience.deck}</p><p class="post-meta">{experience.role}</p></header>
   <dl class="experience-metrics">{#each experience.metrics as [value, label]}<div><dt>{label}</dt><dd>{value}</dd></div>{/each}</dl>
   <p class="experience-intro">{experience.intro}</p>
   {#key experience.slug}<FlowDiagram steps={experience.steps} details={experience.stepDetails} />{/key}

@@ -390,3 +390,16 @@ button:focus-visible { outline:2px solid #2563eb; outline-offset:4px; }
  .home-link-row a { font-size:.6rem; }
  .home-link-secondary a { font-size:.54rem; }
 }
+.company-logo { display:flex; align-items:center; justify-content:center; width:112px; height:80px; flex-shrink:0; background:#fff; border:1px solid #dce2dd; border-radius:10px; padding:12px; }
+.company-logo img { display:block; width:64px; height:56px; object-fit:contain; }
+.company-logo-wide img { width:88px; height:56px; }
+.experience-row { grid-template-columns:112px minmax(0,1fr); gap:2rem; }
+.experience-brand { display:flex; align-items:center; gap:1.4rem; margin-bottom:1.7rem; }
+.article-heading .experience-brand .section-kicker { margin:0; }
+@media(max-width:680px) {
+ .company-logo { width:76px; height:64px; padding:8px; }
+ .company-logo img { width:48px; height:46px; }
+ .company-logo-wide img { width:60px; height:46px; }
+ .experience-row { grid-template-columns:76px minmax(0,1fr); gap:1rem; }
+ .experience-brand { gap:1rem; }
+}
