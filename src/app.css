@@ -37,11 +37,21 @@ body {
   pointer-events: none;
 }
 
-.mountains .path {
+.mountains .mountain-outline,
+.mountains .mountain-ridge,
+.mountains .mountain-interior {
   stroke: #202022;
-  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.mountains .mountain-outline { stroke-width: 2.7; }
+.mountains .mountain-ridge { stroke-width: 1.7; }
+.mountains .mountain-interior { stroke-width: .82; opacity: .88; }
+
+.mountains .mountain-outline path,
+.mountains .mountain-ridge path,
+.mountains .mountain-interior path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: draw-mountains var(--draw-duration, 10s) ease-in-out var(--draw-delay, 0s) forwards;
@@ -227,7 +237,9 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .mountains .path {
+  .mountains .mountain-outline path,
+  .mountains .mountain-ridge path,
+  .mountains .mountain-interior path {
     animation: none;
     stroke-dashoffset: 0;
   }
