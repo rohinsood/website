@@ -1,0 +1,4 @@
+<script>import { experiences } from '$lib/experiences';</script>
+<svelte:head><title>Experience — Rohin Sood</title><meta name="description" content="Engineering stories from Qualcomm, NASA Ames, Jirav, and the communities where I build." /></svelte:head>
+<section class="about-hero entrance"><p class="section-kicker">Professional experience</p><h1>Work, with<br />the details.</h1><p class="large-deck">The systems I helped build, the questions behind them, and what I learned along the way.</p></section>
+<div class="experience-list">{#each experiences as experience, i}<a class="experience-row" href={'/experience/' + experience.slug}><div class="experience-index">0{i + 1}</div><div><p class="section-kicker">{experience.date}</p><h2>{experience.company}<span aria-hidden="true">↗</span></h2><p class="experience-role">{experience.role}</p><p>{experience.deck}</p><span class="experience-tag">{experience.tag}</span></div></a>{/each}</div>
