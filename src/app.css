@@ -192,6 +192,11 @@ a:focus-visible {
 .prose pre:focus-visible { outline: 2px solid #2563eb; outline-offset: 4px; }
 .prose figure { margin: 2.5rem 0; }
 .prose figure > img { object-fit: contain; border-radius: .6rem; width: 100%; height: auto; max-height: 640px; display: block; }
+.prose .figure-link { display: block; }
+.prose .figure-link img { display: block; width: 100%; height: auto; border-radius: .6rem; }
+.post-video { width: 100%; aspect-ratio: 16 / 9; margin-top: 2rem; overflow: hidden; border-radius: .6rem; background: #0f172a; }
+.post-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+.prose .media-caption, .prose .video-link { color: #64748b; font-size: .8rem; line-height: 1.65; }
 .post-illustration { display: grid; place-items: center; padding: 2.5rem; background: #f1f5f9; border-radius: .6rem; }
 .post-illustration img { display: block; width: min(100%, 240px); height: auto; mix-blend-mode: multiply; }
 .prose figcaption { margin-top: .8rem; font-size: .75rem; line-height: 1.6; color: #64748b; }

@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="1560" viewBox="0 0 2600 1560" role="img" aria-labelledby="title desc"><title id="title">GRIP pipeline: from continuous phenotype to ranked gene candidates</title><desc id="desc">RNA sequencing and continuous Oil Red O measurements enter a filtered, transformed, sample-grouped regression pipeline. Conventional and invariant models generate predictions and feature evidence. Mode-filtered models contribute to gene scoring, followed by biological annotation, enrichment and sensitivity analyses. Dimensions reflect one saved local reconstruction.</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L9 4.5L0 9Z" fill="#315f9d"/></marker></defs><g font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="2600" height="1560" rx="0" fill="white" stroke="white" stroke-width="1.8"/>
+<text x="50" y="76" font-size="46" fill="#182735" font-weight="750" text-anchor="start">GRIP</text>
+<text x="190" y="75" font-size="36" fill="#182735" font-weight="650" text-anchor="start">From continuous phenotype to ranked gene candidates</text>
+<text x="50" y="123" font-size="25" fill="#526477" font-weight="400" text-anchor="start">A regression and invariance workflow for RNA-seq · architecture grounded in the local implementation</text>
+<path d="M50 158H2550" fill="none" stroke="#cfd9e3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  />
+<circle cx="67" cy="205" r="17" fill="#315f9d" stroke="#315f9d" stroke-width="1.6"/>
+<text x="67" y="212" font-size="20" fill="white" font-weight="700" text-anchor="middle">1</text>
+<text x="95" y="213" font-size="24" fill="#182735" font-weight="700" text-anchor="start">Biological inputs</text>
+<text x="50" y="250" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Spaceflight and ground-control studies</text>
+<circle cx="497" cy="205" r="17" fill="#315f9d" stroke="#315f9d" stroke-width="1.6"/>
+<text x="497" y="212" font-size="20" fill="white" font-weight="700" text-anchor="middle">2</text>
+<text x="525" y="213" font-size="24" fill="#182735" font-weight="700" text-anchor="start">Prepare environments</text>
+<text x="480" y="250" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Align samples, preserve the target</text>
+<circle cx="1017" cy="205" r="17" fill="#315f9d" stroke="#315f9d" stroke-width="1.6"/>
+<text x="1017" y="212" font-size="20" fill="white" font-weight="700" text-anchor="middle">3</text>
+<text x="1045" y="213" font-size="24" fill="#182735" font-weight="700" text-anchor="start">Fit parallel models</text>
+<text x="1000" y="250" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Shared input contract; distinct assumptions</text>
+<circle cx="1577" cy="205" r="17" fill="#315f9d" stroke="#315f9d" stroke-width="1.6"/>
+<text x="1577" y="212" font-size="20" fill="white" font-weight="700" text-anchor="middle">4</text>
+<text x="1605" y="213" font-size="24" fill="#182735" font-weight="700" text-anchor="start">Evaluate and aggregate</text>
+<text x="1560" y="250" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Retain model and gene provenance</text>
+<circle cx="2087" cy="205" r="17" fill="#315f9d" stroke="#315f9d" stroke-width="1.6"/>
+<text x="2087" y="212" font-size="20" fill="white" font-weight="700" text-anchor="middle">5</text>
+<text x="2115" y="213" font-size="24" fill="#182735" font-weight="700" text-anchor="start">Interpret candidates</text>
+<text x="2070" y="250" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Connect ranked evidence to biology</text>
+<rect x="50" y="285" width="350" height="192" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="72" y="321" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Experimental cohorts</text>
+<g transform="translate(83 341)"><path d="M9 32Q-6 29 0 15Q11 4 36 10Q54 12 62 29L72 34L59 41Q32 55 10 40Q-4 48-12 39" fill="#fff" stroke="#526477" stroke-width="2"/><circle cx="45" cy="15" r="10" fill="#fff" stroke="#526477" stroke-width="2"/><circle cx="61" cy="30" r="2" fill="#182735"/><path d="M20 27Q30 17 39 28L35 37L21 35Z" fill="#d58c84"/></g>
+<g transform="translate(192 341)"><path d="M9 32Q-6 29 0 15Q11 4 36 10Q54 12 62 29L72 34L59 41Q32 55 10 40Q-4 48-12 39" fill="#fff" stroke="#526477" stroke-width="2"/><circle cx="45" cy="15" r="10" fill="#fff" stroke="#526477" stroke-width="2"/><circle cx="61" cy="30" r="2" fill="#182735"/><path d="M20 27Q30 17 39 28L35 37L21 35Z" fill="#d58c84"/></g>
+<text x="77" y="434" font-size="22" fill="#182735" font-weight="600" text-anchor="start">Spaceflight</text>
+<text x="231" y="434" font-size="22" fill="#182735" font-weight="600" text-anchor="start">Ground</text>
+<path d="M225 477V515" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="50" y="530" width="350" height="206" rx="12" fill="#fbf5eb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="72" y="567" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Continuous ORO phenotype</text>
+<text x="72" y="602" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Oil Red O lipid measurement</text>
+<text x="72" y="631" font-size="21" fill="#526477" font-weight="400" text-anchor="start">y = percent positivity</text>
+<text x="72" y="660" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Keep quantitative variation</text>
+<path d="M77 696H371" fill="none" stroke="#a46a25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M77 689V703" fill="none" stroke="#a46a25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M135.8 689V703" fill="none" stroke="#a46a25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M194.6 689V703" fill="none" stroke="#a46a25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M253.39999999999998 689V703" fill="none" stroke="#a46a25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M312.2 689V703" fill="none" stroke="#a46a25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M371 689V703" fill="none" stroke="#a46a25" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"  />
+<text x="77" y="722" font-size="16" fill="#a46a25" font-weight="400" text-anchor="start">lower</text>
+<text x="371" y="722" font-size="16" fill="#a46a25" font-weight="400" text-anchor="end">higher</text>
+<path d="M225 493H30V850H50" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="50" y="795" width="350" height="290" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="72" y="832" font-size="24" fill="#182735" font-weight="650" text-anchor="start">RNA sequencing</text>
+<text x="72" y="867" font-size="22" fill="#526477" font-weight="400" text-anchor="start">X = sample × gene counts</text>
+<rect x="85" y="900" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="113" y="900" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="141" y="900" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="169" y="900" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="197" y="900" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="225" y="900" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="253" y="900" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="281" y="900" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="309" y="900" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="85" y="918" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="113" y="918" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="141" y="918" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="169" y="918" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="197" y="918" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="225" y="918" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="253" y="918" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="281" y="918" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="309" y="918" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="85" y="936" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="113" y="936" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="141" y="936" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="169" y="936" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="197" y="936" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="225" y="936" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="253" y="936" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="281" y="936" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="309" y="936" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="85" y="954" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="113" y="954" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="141" y="954" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="169" y="954" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="197" y="954" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="225" y="954" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="253" y="954" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="281" y="954" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="309" y="954" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="85" y="972" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="113" y="972" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="141" y="972" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="169" y="972" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="197" y="972" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="225" y="972" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="253" y="972" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="281" y="972" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="309" y="972" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="85" y="990" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="113" y="990" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<rect x="141" y="990" width="24" height="14" rx="1" fill="#d5e3f2" stroke="white" stroke-width="1.8"/>
+<rect x="169" y="990" width="24" height="14" rx="1" fill="#7398c5" stroke="white" stroke-width="1.8"/>
+<rect x="197" y="990" width="24" height="14" rx="1" fill="#e9eff8" stroke="white" stroke-width="1.8"/>
+<rect x="225" y="990" width="24" height="14" rx="1" fill="#a0bbdb" stroke="white" stroke-width="1.8"/>
+<rect x="253" y="990" width="24" height="14" rx="1" fill="#315f9d" stroke="white" stroke-width="1.8"/>
+<rect x="281" y="990" width="24" height="14" rx="1" fill="#bdd1e9" stroke="white" stroke-width="1.8"/>
+<rect x="309" y="990" width="24" height="14" rx="1" fill="#527eb2" stroke="white" stroke-width="1.8"/>
+<text x="72" y="1046" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Expression matrix (schematic)</text>
+<path d="M400 629H435V360H480" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<path d="M400 928H450V390H480" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="50" y="1150" font-size="22" fill="#182735" font-weight="600" text-anchor="start">Same samples supply X and y.</text>
+<text x="50" y="1184" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Technical views add representations,</text>
+<text x="50" y="1215" font-size="21" fill="#526477" font-weight="400" text-anchor="start">not independent biological replicates.</text>
+<rect x="480" y="285" width="440" height="159" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="502" y="322" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Load, validate, align</text>
+<text x="502" y="357" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Join expression and metadata by ID</text>
+<text x="502" y="386" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Propagate configured targets; drop missing</text>
+<text x="502" y="415" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Keep count matrix and phenotype aligned</text>
+<path d="M700 444V472" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="480" y="485" width="440" height="143" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="502" y="522" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Filter gene features</text>
+<text x="502" y="557" font-size="21" fill="#526477" font-weight="400" text-anchor="start">ID / protein-coding checks; low counts</text>
+<text x="502" y="586" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Zero fraction and variability filters</text>
+<text x="502" y="615" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Saved run: 12,179 → 12,081 genes</text>
+<path d="M700 628V655" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="480" y="670" width="440" height="230" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="502" y="708" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Build technical environments</text>
+<text x="502" y="741" font-size="21" fill="#526477" font-weight="400" text-anchor="start">environment = library preparation : view</text>
+<rect x="500" y="763" width="193" height="31" rx="5" fill="white" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="510" y="785" font-size="18" fill="#182735" font-weight="400" text-anchor="start">identity</text>
+<rect x="705" y="763" width="193" height="31" rx="5" fill="white" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="715" y="785" font-size="18" fill="#182735" font-weight="400" text-anchor="start">log2(x + 1)</text>
+<rect x="500" y="803" width="193" height="31" rx="5" fill="white" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="510" y="825" font-size="18" fill="#182735" font-weight="400" text-anchor="start">square root</text>
+<rect x="705" y="803" width="193" height="31" rx="5" fill="white" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="715" y="825" font-size="18" fill="#182735" font-weight="400" text-anchor="start">median-of-ratios</text>
+<rect x="500" y="843" width="193" height="31" rx="5" fill="white" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="510" y="865" font-size="18" fill="#182735" font-weight="400" text-anchor="start">centered log-ratio</text>
+<rect x="705" y="843" width="193" height="31" rx="5" fill="white" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="715" y="865" font-size="18" fill="#182735" font-weight="400" text-anchor="start">Box–Cox</text>
+<path d="M700 900V930" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="480" y="945" width="440" height="168" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="502" y="982" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Group by sample ID; split</text>
+<text x="502" y="1017" font-size="21" fill="#526477" font-weight="400" text-anchor="start">All views of one sample stay together</text>
+<text x="502" y="1046" font-size="21" fill="#526477" font-weight="400" text-anchor="start">48 train / 7 validation / 7 test samples</text>
+<text x="502" y="1075" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Fit scaler on training rows only</text>
+<path d="M700 1113V1140" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="480" y="1155" width="440" height="137" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="502" y="1192" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Materialize model inputs</text>
+<text x="502" y="1227" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Train: 288 rows across 12 environments</text>
+<text x="502" y="1256" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Validation/test: identity-view rows</text>
+<text x="502" y="1285" font-size="21" fill="#526477" font-weight="400" text-anchor="start">X and continuous y retained in every view</text>
+<path d="M920 1215H956V505H1000" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<path d="M956 940H1000" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<text x="1000" y="285" font-size="25" fill="#315f9d" font-weight="700" text-anchor="start">Conventional regressors</text>
+<rect x="1000" y="305" width="480" height="373" rx="12" fill="#f4f7fb" stroke="#8da4bc" stroke-width="1.8"/>
+<text x="1024" y="345" font-size="23" fill="#182735" font-weight="650" text-anchor="start">Pooled empirical-risk baselines</text>
+<path d="M1060 374V390M1060 390H1034V412M1060 390H1087V412" fill="none" stroke="#315f9d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  />
+<circle cx="1060" cy="374" r="6" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1034" cy="412" r="6" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1087" cy="412" r="6" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<text x="1130" y="397" font-size="22" fill="#182735" font-weight="400" text-anchor="start">Ridge · Lasso · Elastic Net</text>
+<text x="1130" y="436" font-size="22" fill="#182735" font-weight="400" text-anchor="start">Support Vector Regression</text>
+<text x="1130" y="475" font-size="22" fill="#182735" font-weight="400" text-anchor="start">Random Forest · MLP</text>
+<path d="M1027 505L1065 493" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1027 505L1065 521" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1027 505L1065 549" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1027 535L1065 493" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1027 535L1065 521" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1027 535L1065 549" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1065 493L1105 521" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1065 521L1105 521" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1065 549L1105 521" fill="none" stroke="#315f9d" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<circle cx="1027" cy="505" r="5" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1027" cy="535" r="5" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1065" cy="493" r="5" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1065" cy="521" r="5" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1065" cy="549" r="5" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<circle cx="1105" cy="521" r="5" fill="white" stroke="#315f9d" stroke-width="1.6"/>
+<path d="M1024 580H1455" fill="none" stroke="#cfd9e3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  />
+<text x="1024" y="614" font-size="22" fill="#182735" font-weight="600" text-anchor="start">Optional XGBoost</text>
+<text x="1024" y="648" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Configured model; skipped if unavailable</text>
+<text x="1000" y="738" font-size="25" fill="#207b78" font-weight="700" text-anchor="start">Invariant-model variants</text>
+<rect x="1000" y="758" width="480" height="405" rx="12" fill="#edf7f5" stroke="#a8ccc6" stroke-width="1.8"/>
+<path d="M1028 812L1066 800" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 812L1066 828" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 812L1066 856" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 842L1066 800" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 842L1066 828" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 842L1066 856" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1066 800L1106 828" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1066 828L1106 828" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1066 856L1106 828" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<circle cx="1028" cy="812" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1028" cy="842" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1066" cy="800" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1066" cy="828" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1066" cy="856" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1106" cy="828" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<text x="1130" y="821" font-size="23" fill="#182735" font-weight="650" text-anchor="start">Linear / nonlinear IRM</text>
+<text x="1130" y="853" font-size="20" fill="#526477" font-weight="400" text-anchor="start">Shared weights or representation</text>
+<text x="1130" y="882" font-size="20" fill="#526477" font-weight="400" text-anchor="start">Environment MSE + gradient penalty</text>
+<path d="M1024 917H1455" fill="none" stroke="#bed8d2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 970L1066 958" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 970L1066 986" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 970L1066 1014" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 1000L1066 958" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 1000L1066 986" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1028 1000L1066 1014" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1066 958L1106 986" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1066 986L1106 986" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<path d="M1066 1014L1106 986" fill="none" stroke="#207b78" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"  />
+<circle cx="1028" cy="970" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1028" cy="1000" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1066" cy="958" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1066" cy="986" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1066" cy="1014" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<circle cx="1106" cy="986" r="5" fill="white" stroke="#207b78" stroke-width="1.6"/>
+<text x="1130" y="980" font-size="23" fill="#182735" font-weight="650" text-anchor="start">Linear / nonlinear ICP-style</text>
+<text x="1130" y="1013" font-size="20" fill="#526477" font-weight="400" text-anchor="start">Candidate-subset search</text>
+<text x="1130" y="1042" font-size="20" fill="#526477" font-weight="400" text-anchor="start">Residual-variance stability screen</text>
+<text x="1024" y="1130" font-size="21" fill="#207b78" font-weight="600" text-anchor="start">Technical invariance ≠ confirmed causality</text>
+<text x="1000" y="1220" font-size="22" fill="#526477" font-weight="400" text-anchor="start">Both families produce predictions and</text>
+<text x="1000" y="1252" font-size="22" fill="#526477" font-weight="400" text-anchor="start">gene-level evidence through one interface.</text>
+<path d="M1480 490H1515V361H1560" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<path d="M1480 956H1532V393H1560" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<path d="M920 1260H1545V425H1560" fill="none" stroke="#315f9d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<text x="1030" y="1290" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Identity validation/test views</text>
+<rect x="1560" y="285" width="430" height="164" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="1582" y="322" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Evaluate identity predictions</text>
+<text x="1582" y="357" font-size="21" fill="#526477" font-weight="400" text-anchor="start">R² · RMSE · MAE</text>
+<text x="1582" y="386" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Pearson r · Spearman ρ</text>
+<text x="1582" y="415" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Validation/test predictions are saved</text>
+<path d="M1775 449V478" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="1560" y="492" width="430" height="189" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="1582" y="529" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Generate feature evidence</text>
+<text x="1582" y="564" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Permutation importance; native methods</text>
+<text x="1582" y="593" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Optional SHAP in other profiles</text>
+<text x="1582" y="622" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Saved run: PFI with three repeats</text>
+<text x="1582" y="651" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Importance maps by environment</text>
+<path d="M1775 681V711" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="1560" y="725" width="430" height="168" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="1582" y="762" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Filter the voting-model pool</text>
+<text x="1582" y="797" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Choose invariant / conventional / mixed</text>
+<text x="1582" y="826" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Rank by R², then RMSE</text>
+<text x="1582" y="855" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Saved run: keep top 3 invariant models</text>
+<path d="M1775 893V921" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="1560" y="935" width="430" height="255" rx="12" fill="#fbf5eb" stroke="#d9c6a9" stroke-width="1.8"/>
+<text x="1582" y="973" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Aggregate gene evidence</text>
+<text x="1582" y="1016" font-size="25" fill="#182735" font-weight="650" text-anchor="start">score(g) = Fg × Ig × Q̄ × Sg</text>
+<text x="1582" y="1055" font-size="20" fill="#526477" font-weight="400" text-anchor="start">F: selection frequency; I: mean importance</text>
+<text x="1582" y="1086" font-size="20" fill="#526477" font-weight="400" text-anchor="start">S: stability across environment importances</text>
+<text x="1582" y="1117" font-size="20" fill="#526477" font-weight="400" text-anchor="start">Q̄: common quality factor for this run</text>
+<text x="1582" y="1170" font-size="19" fill="#a46a25" font-weight="400" text-anchor="start">Keep component scores and model provenance</text>
+<path d="M1990 1060H2026V360H2070" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="2070" y="285" width="480" height="196" rx="12" fill="#fbf5eb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="2092" y="322" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Ranked candidate genes</text>
+<text x="2092" y="357" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Top-20 set and full gene ranking</text>
+<text x="2092" y="386" font-size="21" fill="#526477" font-weight="400" text-anchor="start">CSV evidence, model metrics, run config</text>
+<text x="2092" y="415" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Leading local candidate: Lpl</text>
+<text x="2092" y="444" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Hypothesis ranking, not causal probabilities</text>
+<path d="M2310 481V514" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="2070" y="530" width="480" height="167" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="2092" y="567" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Biological annotation and enrichment</text>
+<text x="2092" y="602" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Map Ensembl IDs to gene symbols</text>
+<text x="2092" y="631" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Interpret functions and curated gene sets</text>
+<text x="2092" y="660" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Downstream analysis, outside model fitting</text>
+<path d="M2310 697V730" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="2070" y="745" width="480" height="202" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="2092" y="782" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Inspect sensitivity and confounding</text>
+<text x="2092" y="817" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Expression versus ORO by study/prep</text>
+<text x="2092" y="846" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Mitochondrial and influential-sample checks</text>
+<text x="2092" y="875" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Compare GRIP and CRISP candidate sets</text>
+<text x="2092" y="904" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Separate technical stability from biology</text>
+<path d="M2310 947V980" fill="none" stroke="#315f9d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+<rect x="2070" y="995" width="480" height="195" rx="12" fill="#f4f7fb" stroke="#cfd9e3" stroke-width="1.8"/>
+<text x="2092" y="1032" font-size="24" fill="#182735" font-weight="650" text-anchor="start">Test the biological hypothesis</text>
+<text x="2092" y="1067" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Independent cohorts / missions</text>
+<text x="2092" y="1096" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Training-fitted preprocessing throughout</text>
+<text x="2092" y="1125" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Experimental validation of mechanisms</text>
+<text x="2092" y="1154" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Research follow-up, not a completed result</text>
+<path d="M50 1330H2550" fill="none" stroke="#cfd9e3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"  />
+<text x="50" y="1374" font-size="19" fill="#315f9d" font-weight="700" text-anchor="start">LOCAL RUN SNAPSHOT</text>
+<text x="310" y="1374" font-size="23" fill="#182735" font-weight="600" text-anchor="start">62 sample IDs  ·  12,081 genes  ·  6 views  ·  12 technical environments  ·  48 / 7 / 7 split  ·  seed 42</text>
+<text x="50" y="1417" font-size="21" fill="#526477" font-weight="400" text-anchor="start">Voting-set R²: nonlinear ICP −1.23; nonlinear IRM −1.79; linear ICP −1.86. Random Forest R² = 0.218 was excluded by invariant mode.</text>
+<text x="50" y="1460" font-size="20" fill="#526477" font-weight="400" text-anchor="start">Evaluation note: grouping copies and fitting the scaler on train do not establish a fully leakage-free pipeline; data-adaptive transforms and selection need independent evaluation.</text>
+<text x="50" y="1500" font-size="19" fill="#526477" font-weight="400" text-anchor="start">Source: local GRIP source + full_osdr_recreation configuration, log and artifacts (saved July 9, 2026). Architecture illustration; matrix colors are schematic.</text>
+</g></svg>
