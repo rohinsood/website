@@ -368,3 +368,25 @@ button:focus-visible { outline:2px solid #2563eb; outline-offset:4px; }
  .map-nodes a,.site-note span,.experience-row h2 span { transition:none; }
  .logo:hover { transform:none; }
 }
+/* Equal side columns keep the homepage name on the composition's centerline. */
+.home .profile { --side-width:clamp(9rem,15vw,12rem); display:grid; grid-template-columns:var(--side-width) minmax(0,1fr) var(--side-width); gap:clamp(1rem,2.5vw,2rem); width:min(94vw,1180px); padding:2rem; }
+.home .profile .logo { width:var(--side-width); }
+.home .profile h1 { text-align:center; font-size:clamp(2.5rem,5.3vw,4.5rem); white-space:nowrap; }
+.home-link-block { width:var(--side-width); margin:0; align-self:center; }
+.home-link-row { display:flex; justify-content:space-between; align-items:baseline; gap:.4rem; margin:0; }
+.home-link-row a { color:inherit; font-size:clamp(.65rem,.8vw,.78rem); line-height:1.5; white-space:nowrap; text-decoration:none; }
+.home-link-row a:hover { text-decoration:underline; text-underline-offset:3px; }
+.home-link-secondary { margin-top:.35rem; }
+.home-link-secondary a { color:#475569; font-size:clamp(.58rem,.7vw,.68rem); }
+@media(max-width:760px) {
+ .home .profile { --side-width:8.5rem; grid-template-columns:1fr 1fr; gap:1.5rem; width:calc(100% - 2rem); padding:2rem 1rem; align-items:center; }
+ .home .profile h1 { grid-column:1/-1; grid-row:1; white-space:normal; font-size:clamp(2.7rem,10vw,4rem); }
+ .home .profile .logo { grid-column:1; grid-row:2; justify-self:end; }
+ .home-link-block { grid-column:2; grid-row:2; justify-self:start; }
+}
+@media(max-width:360px) {
+ .home .profile { --side-width:7.5rem; gap:1rem; }
+ .home-link-row { gap:.25rem; }
+ .home-link-row a { font-size:.6rem; }
+ .home-link-secondary a { font-size:.54rem; }
+}
